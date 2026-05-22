@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "username": "2023-ADBU-001",
+    "password_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "email": "student@adbu.edu.in",
+    "role": "student"
+  },
+  {
+    "id": 2,
+    "username": "EMP-2024-001",
+    "password_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "email": "employee@adbu.edu.in",
+    "role": "employee"
+  },
+  {
+    "id": 3,
+    "username": "PAR-2024-001",
+    "password_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "email": "parent@adbu.edu.in",
+    "role": "parent"
+  }
+]
