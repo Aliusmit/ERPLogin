@@ -2,8 +2,7 @@
 @keyframes spin{to{transform:rotate(360deg)}}*{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#173a6b;--secondary:#0f2747;--gold:#d1a04d;--light:#f4f7fb;
     --text:#1b1b1b;--border:#d8dde6}body{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
-    background:linear-gradient(rgba(8,20,38,.82),rgba(8,20,38,.9)),url(logo.webp);
-    background-size:cover;background-position:center;min-height:100vh;color:#fff;
+    background:linear-gradient(160deg,#0a1628 0%,#0f2747 45%,#173a6b 100%);min-height:100vh;color:#fff;
     display:flex;flex-direction:column}header{width:100%;padding:18px 60px;
     border-bottom:1px solid rgba(255,255,255,.08);background:linear-gradient(90deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
     backdrop-filter:blur(16px)}.topbar{justify-content:space-between}.brand,.topbar,
@@ -33,7 +32,7 @@
     animation:fadeIn .22s ease;max-height:90vh;overflow-y:auto}.close-btn{position:absolute;top:15px;right:18px;font-size:24px;cursor:pointer;color:#777}.login-box h3{font-size:28px;margin-bottom:10px}.login-box 
     .login-sub{color:#5d6672;margin-bottom:28px;font-size:14px}.form-group{margin-bottom:18px}.form-group label{display:block;margin-bottom:8px;font-size:14px;font-weight:600;color:#334}
     .form-group input{width:100%;padding:14px;border:1px solid #ccd3dc;outline:0;font-size:15px;transition:.2s ease;border-radius:8px}.form-group input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(23,58,107,.1)}
-    .captcha-row{display:flex;gap:12px;align-items:center;margin-top:5px}.captcha-code{background:#f0f2f5;font-family:monospace;font-size:26px;font-weight:700;letter-spacing:6px;padding:10px 15px;border-radius:8px;text-align:center;border:1px solid #ccd3dc}
+    .recaptcha-notice{font-size:11px;color:#8a939e;margin-top:12px;line-height:1.5;text-align:center}.recaptcha-notice a{color:var(--primary)}
     .btn-secondary{background:#e9ecef;border:0;padding:10px 16px;border-radius:8px;cursor:pointer;font-weight:500}.btn-sm{padding:8px 12px;font-size:13px}.otp-panel{display:none;margin-top:20px;border-top:1px solid #ddd;padding-top:20px}
     .otp-panel.show{display:block}.otp-meta{display:flex;justify-content:space-between;font-size:13px;margin-bottom:15px;color:#5d6672}.login-submit{width:100%;padding:15px;border:0;background:linear-gradient(135deg,var(--primary),#0f2747);color:#fff;
     font-size:15px;font-weight:600;cursor:pointer;margin-top:6px;transition:.2s ease;border-radius:8px}.login-submit:hover{filter:brightness(1.05)}.forgot{text-align:right;margin-top:14px}.forgot a{text-decoration:none;color:var(--primary);font-size:14px}

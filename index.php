@@ -35,7 +35,7 @@ if (empty($_SESSION['csrf_token'])) {
 <header>
     <div class="topbar">
         <div class="brand">
-            <img src="logo.webp" alt="ADBU Logo">
+            <img src="logo.webp" alt="ADBU Logo" width="80" height="80" decoding="async" fetchpriority="high">
             <div class="brand-text">
                 <h1>Assam Don Bosco University</h1>
                 <p>Enterprise Resource Portal</p>
@@ -96,15 +96,11 @@ if (empty($_SESSION['csrf_token'])) {
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <div class="form-group"><label>User ID</label><input type="text" id="modalUsername" placeholder="Enter user ID" required></div>
             <div class="form-group"><label>Password</label><input type="password" id="modalPassword" placeholder="Enter password" required></div>
-            <div class="form-group">
-                <label>CAPTCHA</label>
-                <div class="captcha-row">
-                    <div class="captcha-code" id="captchaCode">ABCD</div>
-                    <input type="text" id="captchaInput" placeholder="Enter code" style="flex:1;" required>
-                    <button type="button" class="btn-secondary btn-sm" id="refreshCaptchaBtn">⟳</button>
-                </div>
-            </div>
             <button type="submit" class="login-submit" id="modalLoginBtn">Sign In</button>
+            <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.
+            </p>
             <div class="forgot"><a href="#" id="forgotLink">Forgot Password?</a></div>
             <div class="otp-panel" id="otpPanelModal">
                 <div class="otp-meta"><span>⏱️ Expires in: <span id="otpTimer">02:00</span></span><span>🔄 Attempts left: <span id="otpAttempts">3</span></span></div>
@@ -114,7 +110,8 @@ if (empty($_SESSION['csrf_token'])) {
         </form>
     </div>
 </div>
-<footer>Copyright @ADBU Since 2015. You are accessing ADBU ERP from <span id="serverIP">detecting...</span>. For any queries write to erp@dbuniversity.ac.in</footer>
+<footer>Copyright @ADBU Since 2015. You are accessing ADBU ERP from <span id="serverIP"><?php echo htmlspecialchars($_SERVER['REMOTE_ADDR'] ?? 'your network'); ?></span>. For any queries write to erp@dbuniversity.ac.in</footer>
+<script>window.RECAPTCHA_SITE_KEY = <?php echo json_encode(recaptchaIsConfigured() ? RECAPTCHA_SITE_KEY : ''); ?>;</script>
 <script src="app.js" defer></script>
 </body>
 </html>

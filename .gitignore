@@ -1,0 +1,4 @@
+# Local secrets and runtime logs
+secrets.local.php
+.env
+otp_log.txt
